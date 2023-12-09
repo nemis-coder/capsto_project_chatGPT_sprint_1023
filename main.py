@@ -2,6 +2,9 @@
 
 from brain_module import ChatGPT
 import json
+from email_sender import EmailSender
+
+
 
 months_of_the_year = [
     "January", "February", "March",
@@ -31,4 +34,9 @@ if  __name__ == "__main__":
     response = bot.request_openai(prompt)
     message = json.loads((response.model_dump()['choices'][0]['message']['content']))
     print(f"Today is your lucky day!.\n  MystiCookie said:\n {message['message']}")
+    # Now you can use EmailSender class
+    email_to_send = input("If you want to receive your lucky in your email, please give me an email?")
+    if(len(email_to_send)>0 and '@' in email_to_send):
+        email_sender = EmailSender()
+        email_sender.send_email("Your Daily Fortune Cookie!!!", message['message'], email_to_send, "image_path.jpg")
 
