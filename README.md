@@ -74,16 +74,33 @@ Provide step-by-step instructions on how to use the application. This could incl
 1. **Starting the Application**:
    You need to run the following command in the directory: capsto_project_chatGPT_sprint_1023
    ```python
-   python main 
+   python main
+<div align="center">
+<img src="screens/start.png" alt="Logo" width="610" height="400"/>
+</div>
 
 
 2. **Navigating the Interface**:
   You need to answer the questions like the following example:
+  <div align="center">
+  <img src="screens/questions.png" alt="Logo" width="610" height="300"/>  
+  </div>
 
-3. **The response**:
+3. **The response**::
    This is an exmaple of response.
+  <div align="center">
+  <img src="screens/message.png" alt="Logo" width="610" height="300"/>
+  </div>
+
 
 ### Visual Preview
 
 #### Screenshot of Email
 This is how looks the email 
+<div align="center">
+<img src="screens/emailget.png" alt="Logo" width="610" height="50"/>
+</div>
+
+<div align="center">
+<img src="screens/emailsent.png" alt="Logo" width="610" height="300"/>
+</div>
