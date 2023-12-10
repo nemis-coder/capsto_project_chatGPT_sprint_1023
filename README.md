@@ -1,7 +1,7 @@
 # Project Concept
 **"MystiCookie"**
 
-![Logo](logo/mysticcookielogo.png)
+![Logo](logo/mysticcookielogo.png=100x20)
 
 ## Goal
 To provide users with a unique and entertaining virtual fortune cookie experience, offering daily fortunes, wisdom, or humorous sayings.
