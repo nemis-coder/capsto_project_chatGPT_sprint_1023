@@ -4,9 +4,8 @@ import json
 import pyfiglet
 from brain_module import ChatGPT
 from email_sender import EmailSender
-
-
-
+import base64
+import requests
 
 months_of_the_year = [
     "January", "February", "March",
@@ -32,21 +31,39 @@ def set_config():
     return content
 
 
+
+
+def download_image(image_url, local_file_name):
+    response = requests.get(image_url, stream=True)
+    if response.status_code == 200:
+        with open(local_file_name, 'wb') as file:
+            for chunk in response.iter_content(1024):
+                file.write(chunk)
+
 if  __name__ == "__main__":
     ascii_art = pyfiglet.figlet_format("MystiCookie", font="slant")
+    print("---------------------------------------------------------------------")
     print(ascii_art)
+    print("---------------------------------------------------------------------")
     bot = ChatGPT()
     prompt = set_config()
     response = bot.request_openai(prompt)
     message = json.loads((response.model_dump()['choices'][0]['message']['content']))
+
     print()
     print(pyfiglet.figlet_format("Today is your lucky day", font = "digital" ))
     print(pyfiglet.figlet_format("MystiCookie said:", font = "digital" ))
     print("\n ---------------------------------------------------------------------")
     print(f"{message['message']}")
     print("\n ---------------------------------------------------------------------")
-    email_to_send = input("If you want to receive your lucky in your email, please give me an email? (If not just press enter)")
+
+
+    email_to_send = input("If you want to receive your lucky in your email, please give me an email? (If not just press enter) ")
     if(len(email_to_send)>0 and '@' in email_to_send):
+        gen_image = bot.generate_image(message['message'])
+        image_url = gen_image
+        local_file_name = "downloaded_image.png"
+        download_image(image_url, local_file_name)
         email_sender = EmailSender()
-        email_sender.send_email("Your Daily Fortune Cookie!!!", message['message'], email_to_send, "image_path.jpg")
+        email_sender.send_email("Your Daily Fortune Cookie!!!", message['message'], email_to_send, "downloaded_image.png")
 
