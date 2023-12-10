@@ -104,3 +104,8 @@ This is how looks the email
 <div align="center">
 <img src="screens/emailsent.png" alt="Logo" width="610" height="300"/>
 </div>
+
+## Acknowledgments
+
+This project was inspired by or based on the work done in the following GitHub repository:
+- [chatGPT-sprint-1023](https://github.com/wizelineacademy/chatGPT-sprint-1023)
