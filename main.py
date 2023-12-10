@@ -33,15 +33,19 @@ def set_config():
 
 
 if  __name__ == "__main__":
-    ascii_art = pyfiglet.figlet_format("Welcome to MystiCookie!")
+    ascii_art = pyfiglet.figlet_format("MystiCookie", font="slant")
     print(ascii_art)
     bot = ChatGPT()
     prompt = set_config()
     response = bot.request_openai(prompt)
     message = json.loads((response.model_dump()['choices'][0]['message']['content']))
-    print(f"Today is your lucky day!.\n  MystiCookie said:\n {message['message']}")
-
-    email_to_send = input("If you want to receive your lucky in your email, please give me an email?")
+    print()
+    print(pyfiglet.figlet_format("Today is your lucky day", font = "digital" ))
+    print(pyfiglet.figlet_format("MystiCookie said:", font = "digital" ))
+    print("\n ---------------------------------------------------------------------")
+    print(f"{message['message']}")
+    print("\n ---------------------------------------------------------------------")
+    email_to_send = input("If you want to receive your lucky in your email, please give me an email? (If not just press enter)")
     if(len(email_to_send)>0 and '@' in email_to_send):
         email_sender = EmailSender()
         email_sender.send_email("Your Daily Fortune Cookie!!!", message['message'], email_to_send, "image_path.jpg")
