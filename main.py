@@ -60,7 +60,7 @@ if  __name__ == "__main__":
 
     email_to_send = input("If you want to receive your lucky in your email, please give me an email? (If not just press enter) ")
     if(len(email_to_send)>0 and '@' in email_to_send):
-        gen_image = bot.generate_image(message['message'])
+        gen_image = bot.generate_image(" A fourtune coockie just show the cookie with the message: "+message['message'])
         image_url = gen_image
         local_file_name = "downloaded_image.png"
         download_image(image_url, local_file_name)
