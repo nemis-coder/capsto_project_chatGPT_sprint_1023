@@ -20,17 +20,17 @@ class EmailSender:
           <head></head>
           <body>
             <p>{message}</p>
+            <img src="cid:image1">
           </body>
         </html>
         """
-        #<img src="cid:image1">
         msg.attach(MIMEText(html, 'html'))
 
         # Embedding the image
-        #with open(image_path, 'rb') as img:
-        #    mime_image = MIMEImage(img.read(), _subtype=False)
-        #    mime_image.add_header('Content-ID', '<image1>')  # Use Content-ID as reference in HTML
-        #    msg.attach(mime_image)
+        with open(image_path, 'rb') as img:
+            mime_image = MIMEImage(img.read(), _subtype=False)
+            mime_image.add_header('Content-ID', '<image1>')  # Use Content-ID as reference in HTML
+            msg.attach(mime_image)
 
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 
