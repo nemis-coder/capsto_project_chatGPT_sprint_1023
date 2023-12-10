@@ -44,6 +44,15 @@ class ChatGPT:
         # Return the message content from the API response
         return response
 
+    def generate_image(self,message):
+        image_size = 1024
+        response = self.client.images.generate(model="dall-e-3",
+        prompt=message,
+        size=f"{image_size}x{image_size}")
+        image_url = response.model_dump()['data'][0]['url']
+        return image_url
+
+
 # If you need to test or use this directly, you can do:
 # if __name__ == "__main__":
 #     chat_gpt = ChatGPT()
