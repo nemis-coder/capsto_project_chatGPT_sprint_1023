@@ -41,4 +41,26 @@ To provide users with a unique and entertaining virtual fortune cookie experienc
 This project offers a blend of creativity and technical implementation :) <3.  
 This innovative integration of DALL-E with the Fortune Cookie Bot not only enriches the user experience but also showcases the harmonious blend of AI in text and image generation, making each day’s fortune a unique and engaging encounter.
 
+## Installation
 
+### Setting Up Your Python Environment
+
+To set up your Python environment for running the application, you will need to install the necessary packages listed in `requirements.txt`. Follow these steps to install them:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/nemis-coder/capsto_project_chatGPT_sprint_1023
+   cd capsto_project_chatGPT_sprint_1023
+2. **Create and Activate a Virtual Environment (optional but recommended):**:
+    ```python
+    python3 -m venv env
+    source env/bin/activate
+3. **Install Required Packages:**
+   ```bash
+   pip install -r requirements.txt
+### Configuring Environment Variables
+For the application to function properly, you need to set up the following environment variables:
+
+- **OPENAI_API_KEY**: This is your API key for accessing the OpenAI API. It allows the application to make calls to the OpenAI services.
+- **EMAIL_BOT**: The email address that will be used to send emails.
+- **PWD_EMAIL_BOT**: The password for the email account specified in EMAIL_BOT.
