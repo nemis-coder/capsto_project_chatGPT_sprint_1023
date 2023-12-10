@@ -1,6 +1,8 @@
 # Project Concept
 **"MystiCookie"**
 
+![Logo](logo/mysticcookielogo.png)
+
 ## Goal
 To provide users with a unique and entertaining virtual fortune cookie experience, offering daily fortunes, wisdom, or humorous sayings.
 
@@ -32,4 +34,5 @@ To provide users with a unique and entertaining virtual fortune cookie experienc
 
 This project offers a blend of creativity and technical implementation :) <3.  
 This innovative integration of DALL-E with the Fortune Cookie Bot not only enriches the user experience but also showcases the harmonious blend of AI in text and image generation, making each day’s fortune a unique and engaging encounter.
+
 
