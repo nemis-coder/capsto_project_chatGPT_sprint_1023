@@ -64,3 +64,26 @@ For the application to function properly, you need to set up the following envir
 - **OPENAI_API_KEY**: This is your API key for accessing the OpenAI API. It allows the application to make calls to the OpenAI services.
 - **EMAIL_BOT**: The email address that will be used to send emails.
 - **PWD_EMAIL_BOT**: The password for the email account specified in EMAIL_BOT.
+
+## Usage & Demo
+
+### How to Use the Application
+
+Provide step-by-step instructions on how to use the application. This could include:
+
+1. **Starting the Application**:
+   You need to run the following command in the directory: capsto_project_chatGPT_sprint_1023
+   ```python
+   python main 
+
+
+2. **Navigating the Interface**:
+  You need to answer the questions like the following example:
+
+3. **The response**:
+   This is an exmaple of response.
+
+### Visual Preview
+
+#### Screenshot of Email
+This is how looks the email 
